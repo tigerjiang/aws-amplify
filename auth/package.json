@@ -1,0 +1,136 @@
+{
+  "_from": "@aws-amplify/auth@4.1.2",
+  "_id": "@aws-amplify/auth@4.1.2",
+  "_inBundle": false,
+  "_integrity": "sha1-bbdaT4zoRnX1u0pd6oietVJwanc=",
+  "_location": "/@aws-amplify/auth",
+  "_phantomChildren": {
+    "buffer": "4.9.2",
+    "crypto-js": "4.1.1",
+    "fast-base64-decode": "1.0.0",
+    "isomorphic-unfetch": "3.1.0",
+    "js-cookie": "2.2.1"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@aws-amplify/auth@4.1.2",
+    "name": "@aws-amplify/auth",
+    "escapedName": "@aws-amplify%2fauth",
+    "scope": "@aws-amplify",
+    "rawSpec": "4.1.2",
+    "saveSpec": null,
+    "fetchSpec": "4.1.2"
+  },
+  "_requiredBy": [
+    "/@aws-amplify/api-graphql",
+    "/@aws-amplify/datastore",
+    "/@aws-amplify/pubsub",
+    "/aws-amplify"
+  ],
+  "_resolved": "https://registry.nlark.com/@aws-amplify/auth/download/@aws-amplify/auth-4.1.2.tgz",
+  "_shasum": "6db75a4f8ce84675f5bb4a5dea889eb552706a77",
+  "_spec": "@aws-amplify/auth@4.1.2",
+  "_where": "/Users/jiangzehu/work/mobileapp/node_modules/aws-amplify",
+  "author": {
+    "name": "Amazon Web Services"
+  },
+  "bugs": {
+    "url": "https://github.com/aws/aws-amplify/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@aws-amplify/cache": "4.0.8",
+    "@aws-amplify/core": "4.2.0",
+    "amazon-cognito-identity-js": "5.0.5",
+    "crypto-js": "^4.0.0"
+  },
+  "deprecated": false,
+  "description": "Auth category of aws-amplify",
+  "devDependencies": {
+    "@jest/test-sequencer": "^24.9.0"
+  },
+  "gitHead": "7e24a85fe50e88f471ee77111542f7440813bb97",
+  "homepage": "https://aws-amplify.github.io/",
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": true,
+        "tsConfig": {
+          "lib": [
+            "es5",
+            "es2015",
+            "dom",
+            "esnext.asynciterable",
+            "es2017.object"
+          ],
+          "allowJs": true
+        }
+      }
+    },
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "ts-jest"
+    },
+    "preset": "ts-jest",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ],
+    "testEnvironment": "jsdom",
+    "testURL": "http://localhost/",
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "dist",
+      "lib",
+      "lib-esm"
+    ],
+    "testSequencer": "./testSequencer.js"
+  },
+  "license": "Apache-2.0",
+  "main": "./lib/index.js",
+  "module": "./lib-esm/index.js",
+  "name": "@aws-amplify/auth",
+  "publishConfig": {
+    "access": "public"
+  },
+  "react-native": {
+    "./lib/index": "./lib-esm/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aws-amplify/amplify-js.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build-with-test": "npm test && npm run build",
+    "build:cjs": "node ./build es5 && webpack && webpack --config ./webpack.config.dev.js",
+    "build:cjs:watch": "node ./build es5 --watch",
+    "build:esm": "node ./build es6",
+    "build:esm:watch": "node ./build es6 --watch",
+    "clean": "rimraf lib-esm lib dist",
+    "format": "echo \"Not implemented\"",
+    "lint": "tslint '{__tests__,src}/**/*.ts'",
+    "test": "yarn lint --fix && jest -w 1 --coverage"
+  },
+  "sideEffects": [
+    "./src/Auth.ts",
+    "./lib/Auth.js",
+    "./lib-esm/Auth.js",
+    "./dist/aws-amplify-auth.js",
+    "./dist/aws-amplify-auth.min.js"
+  ],
+  "typings": "./lib-esm/index.d.ts",
+  "version": "4.1.2"
+}
